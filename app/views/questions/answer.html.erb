@@ -1,2 +1,16 @@
-<p><%= @response %></p>
-<%= link_to "Ask Another Question!", ask_path %>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-md-6 offset-md-3">
+      <div class="card p-3">
+        <h3>Stupid Coaching</h3>
+        <p><%= params[:question] %></p>
+         <p>--You</p>
+         <br>
+        <p class="mb-3"><%= @response %></p>
+        <p>--Your Coach</p>
+        <%= link_to "Ask Another Question!", ask_path, class: "btn btn-primary" %>
+         <!-- Added paragraph for "Your Coach" -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,15 @@
-<form action="/answer" data-turbo="false">
-  <input type="text" name="question">
-  <input type="submit" value="Ask!">
-</form>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+      <div class="ml-3"> <!-- Adding left margin -->
+        <%= form_tag answer_path, method: :get do %>
+          <div class="form-group">
+            <%= label_tag :question, "Ask a question:" %>
+            <%= text_field_tag :question, nil, class: "form-control" %>
+          </div>
+          <%= submit_tag "Ask!", class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
